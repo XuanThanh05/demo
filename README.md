@@ -1,2 +1,2 @@
 # SpaceShooting
-<img width="1911" height="1036" alt="image" src="https://github.com/user-attachments/assets/7782d68b-8b11-498c-951e-3d7464741a50" />
+<img src="https://raw.githubusercontent.com/XuanThanh05/demo/master/Screenshot%202026-01-20%20005559.png" width="800" alt="screenshot" />
