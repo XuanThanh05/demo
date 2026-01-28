@@ -31,6 +31,12 @@ public class EnemySpawner : MonoBehaviour
         // Wave 2
         foreach (var pos in spawnPos)
             Instantiate(enemy[1], pos, rot);
+        
+        yield return new WaitForSeconds(10f);
+
+        // Wave 3
+        foreach (var pos in spawnPos)
+            Instantiate(enemy[1], pos, rot);
     }
 
 }
