@@ -5,7 +5,9 @@ public class EnemySpawner : MonoBehaviour
 {
     // Danh sách enemy prefab, kéo vào trong Inspector
     public GameObject[] enemy;
+    public BattleFlow BattleFlow;
     Quaternion rot = Quaternion.Euler(0f, 0f, 180f);
+    
 
     private void Start()
     {
@@ -26,17 +28,19 @@ public class EnemySpawner : MonoBehaviour
         foreach (var pos in spawnPos)
             Instantiate(enemy[0], pos, rot);
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(12f);
+        BattleFlow.OnGameWin();
 
-        // Wave 2
-        foreach (var pos in spawnPos)
-            Instantiate(enemy[1], pos, rot);
+
+        // // Wave 2
+        // foreach (var pos in spawnPos)
+        //     Instantiate(enemy[1], pos, rot);
         
-        yield return new WaitForSeconds(10f);
+        // yield return new WaitForSeconds(10f);
 
-        // Wave 3
-        foreach (var pos in spawnPos)
-            Instantiate(enemy[1], pos, rot);
+        // // Wave 3
+        // foreach (var pos in spawnPos)
+        //     Instantiate(enemy[1], pos, rot);
     }
 
 }

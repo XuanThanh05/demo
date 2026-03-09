@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
 
     private bool isInvincible;
     private InvincibleBlinking blinking;
+    public System.Action OnDeath;
 
     void Start()
     {
@@ -49,5 +50,6 @@ public class PlayerStats : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
+        OnDeath?.Invoke();
     }
 }
